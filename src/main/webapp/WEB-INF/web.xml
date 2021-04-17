@@ -1,0 +1,19 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+  version="2.4">
+  
+  <listener>
+    <listener-class>com.binghe.HelloListener</listener-class>
+  </listener>
+  
+  <servlet>
+    <servlet-name>HelloListenerServlet Servlet</servlet-name>
+    <servlet-class>com.binghe.HelloListenerServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>HelloListenerServlet Servlet</servlet-name>
+    <url-pattern>/listener</url-pattern>
+  </servlet-mapping>
+</web-app>

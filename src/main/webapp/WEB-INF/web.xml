@@ -1,0 +1,25 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+  version="2.4">
+
+  <filter>
+    <filter-name>Hello Filter</filter-name>
+    <filter-class>com.binghe.HelloFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>Hello Filter</filter-name>
+    <servlet-name>HelloFilter Servlet</servlet-name>
+  </filter-mapping>
+
+  <servlet>
+    <servlet-name>HelloFilter Servlet</servlet-name>
+    <servlet-class>com.binghe.HelloFilterServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>HelloFilter Servlet</servlet-name>
+    <url-pattern>/hellofilter</url-pattern>
+  </servlet-mapping>
+</web-app>

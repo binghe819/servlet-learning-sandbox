@@ -1,0 +1,29 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+  version="2.4">
+  
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
+  <context-param>
+    <param-name>contextClass</param-name>
+    <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>com.binghe.AppConfig</param-value>
+  </context-param>
+
+  <servlet>
+    <servlet-name>IoC Hello Servlet</servlet-name>
+    <servlet-class>com.binghe.IoCHelloServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>IoC Hello Servlet</servlet-name>
+    <url-pattern>/ioc</url-pattern>
+  </servlet-mapping>
+</web-app>

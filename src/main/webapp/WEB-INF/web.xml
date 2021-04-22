@@ -1,0 +1,25 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+  version="2.4">
+
+  <!-- Servlet WebApplicationContext 설정 (RootWebApplicationContext는 따로 설정해주지 않는 예시)-->
+  <!-- DispatcherServlet 등록-->
+  <servlet>
+    <servlet-name>Dispatcher Servlet</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextClass</param-name>
+      <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+    </init-param>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>com.binghe.WebConfig</param-value>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Dispatcher Servlet</servlet-name>
+    <url-pattern>/app/*</url-pattern>
+  </servlet-mapping>
+</web-app>
